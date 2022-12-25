@@ -8,8 +8,8 @@ New features of this fork:
  2. No longer keeps an MP4 and an MP3 if you want an MP3. Now, it will download the MP4 and then delete it after converting (the conversion was required in the old code). 
  3. Creating a folder when downloading multiple files for organization.
 
-WARNING: DOWNLOADING COPYRIGHTED MATERIAL IS HIGHLY ILLEGAL!
+**WARNING: DOWNLOADING COPYRIGHTED MATERIAL IS HIGHLY ILLEGAL!
 I DO NOT TAKE ANY RESPONSIBILITY FOR YOUR USAGE OF THIS TOOL!
-THIS IS FOR EDUCATIONAL PURPOSES ONLY!
+THIS IS FOR EDUCATIONAL PURPOSES ONLY!**
 
-- NeutralNine/partys over
+NeutralNine/partys over

@@ -1,4 +1,6 @@
 import pytube
+from moviepy.editor import VideoFileClip
+import file_converter
 
 def download_video(url, resolution):
     itag = choose_resolution(resolution)
@@ -11,9 +13,21 @@ def download_videos(urls, resolution):
     for url in urls:
         download_video(url, resolution)
 
+def download_songs(urls, resolution):
+    for url in urls:
+        var = download_video(url, 'low')
+        file_converter.convert_to_mp3(var)
+
+#youtube_downloader.download_video(link, 'low')
+#file_converter.convert_to_mp3(filename)
+
 def download_playlist(url, resolution):
     playlist = pytube.Playlist(url)
     download_videos(playlist.video_urls, resolution)
+
+def download_mp3playlist(url, resolution):
+    playlist = pytube.Playlist(url)
+    download_songs(playlist.video_urls, 'low')    
 
 def choose_resolution(resolution):
     if resolution in ["low", "360", "360p"]:
@@ -30,7 +44,7 @@ def choose_resolution(resolution):
 
 
 def input_links():
-    print("Enter the links of the videos (end by entering 'STOP'):")
+    print("Enter the links of the videos (end by entering 'STOP or 'stop'):")
 
     links = []
     link = ""
